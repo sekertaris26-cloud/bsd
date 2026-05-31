@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="id"><head>
+  <meta charset="UTF-8">
+  <meta name="COLD.MAN.BSD"initial-scale=1.0">
+  <title>COLD.MAN.BSD</title>
+  <script src="https://cdn.tailwindcss.com"></script><!-- COLD.MAN.BSD/https//cold.man.bsd-->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+  <style>
+   /* ===== PREMIUM GLASSMORPHISM BSD ===== */
+
+body{
+    font-family:'Space Mono',monospace;
+    min-height:100vh;
+    overflow-x:hidden;
+    background:
+    radial-gradient(circle at top left,#4c00ff 0%,transparent 30%),
+    radial-gradient(circle at bottom right,#00fff2 0%,transparent 30%),
+    linear-gradient(135deg,#050510,#0d0221,#17003d);
+}
+
+/* Header */
+h1{
+    color:#fff;
+    text-shadow:
+    0 0 10px #ff00ff,
+    0 0 20px #ff00ff,
+    0 0 40px #ff00ff;
+}
+
+/* Glass Card */
+.y2k-card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    border-radius:25px;
+
+    box-shadow:
+    0 8px 32px rgba(0,0,0,.4),
+    0 0 15px rgba(0,255,255,.15);
+
+    transition:all .35s ease;
+
+    overflow:hidden;
+    position:relative;
+}
+
+/* Efek cahaya bergerak */
+.y2k-card::before{
+    content:"";
+    position:absolute;
+    top:-100%;
+    left:-100%;
+    width:250%;
+    height:250%;
+
+    background:
+    linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.12),
+    transparent);
+
+    transform:rotate(25deg);
+    transition:.8s;
+}
+
+.y2k-card:hover::before{
+    left:100%;
+}
+
+.y2k-card:hover{
+    transform:translateY(-10px) scale(1.04);
+
+    border-color:#00ffff;
+
+    box-shadow:
+    0 0 20px #00ffff,
+    0 0 40px rgba(0,255,255,.6),
+    0 15px 40px rgba(0,0,0,.5);
+}
+
+/* Foto */
+.y2k-photo-frame{
+    width:110px;
+    height:110px;
+
+    border-radius:50%;
+    padding:4px;
+
+    background:
+    linear-gradient(
+    45deg,
+    #00ffff,
+    #ff00ff,
+    #00ff88);
+
+    box-shadow:
+    0 0 15px #00ffff,
+    0 0 30px rgba(255,0,255,.5);
+}
+
+.y2k-photo-frame img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:50%;
+    border:3px solid #0d0221;
+}
+
+/* Nama */
+h3{
+    color:#00ffff;
+    margin-top:10px;
+
+    text-shadow:
+    0 0 10px #00ffff;
+}
+
+/* Hobi */
+p{
+    color:#ffffff;
+}
+
+/* Motto */
+.y2k-card p:last-child{
+    color:#ff7ad9;
+    font-style:italic;
+}
+
+/* Animasi bintang */
+.star-deco{
+    position:absolute;
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+/* Blink */
+.blink{
+    animation:blink 1.2s infinite;
+}
+
+@keyframes blink{
+    0%,100%{
+        opacity:1;
+    }
+    50%{
+        opacity:.4;
+    }
+}
+
+/* Footer */
+footer{
+    color:#ff7ad9;
+    text-shadow:0 0 10px #ff00ff;
+}
+
+/* Responsive HP */
+@media(max-width:768px){
+
+    h1{
+        font-size:2rem !important;
+    }
+
+    .y2k-card{
+        margin-bottom:15px;
+    }
+
+    .y2k-photo-frame{
+        width:90px;
+        height:90px;
+    }
+}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="/_sdk/resizing_sdk.js" type="text/javascript"></script>
+ <script src="/_sdk/telemetry_sdk.js"></script></head>
+ <body data-template-id="__page-root" class="min-h-screen relative overflow-x-hidden y2k-bg" style="background: linear-gradient(rgb(10, 0, 21), rgb(26, 0, 46), rgb(0, 0, 16));">
+  <!-- Decorative stars -->
+  <div class="star-deco text-yellow-300" style="top:5%;left:3%">
+   ✦
+  </div>
+  <div class="star-deco text-pink-400" style="top:12%;right:5%;animation-delay:0.5s">
+   ✧
+  </div>
+  <div class="star-deco text-green-300" style="top:30%;left:8%;animation-delay:1s">
+   ★
+  </div>
+  <div class="star-deco text-cyan-300" style="top:50%;right:3%;animation-delay:0.3s">
+   ✦
+  </div>
+  <div class="star-deco text-yellow-200" style="top:70%;left:5%;animation-delay:0.8s">
+   ✧
+  </div>
+  <div class="star-deco text-pink-300" style="bottom:10%;right:8%;animation-delay:1.2s">
+   ★
+  </div>
+  <div class="relative z-10">
+   <header class="text-center py-10">
+    <p class="text-gray-300 blink text-2xl mb-2">★ ★ ★</p>
+    <h1 data-template-id="main-title" class="canva-text text-5xl font-bold uppercase tracking-widest" style="color: rgb(255, 0, 255); font-weight: bold; font-style: normal; font-size: 48px;">✦ BSD ✦</h1>
+    <div class="marquee-wrap mt-3 mx-auto max-w-md">
+     <p data-template-id="subtitle" class="canva-text marquee-text text-lg font-bold" style="color: rgb(0, 255, 136); font-weight: 700; font-style: normal; font-size: 18px;">~ Barudak Santri Daarul Muqimien ~</p>
+    </div>
+    <p class="text-green-300 blink text-2xl mt-2">✦ ✦ ✦</p>
+   </header>
+   <main class="max-w-7xl mx-auto px-4 pb-16">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+     <div data-template-id="card-1" class="canva-card y2k-card flex flex-col items-center text-center p-5 rounded-lg relative" style="background: linear-gradient(135deg, rgb(26, 0, 51), rgb(13, 0, 26));">
+      <div class="y2k-photo-frame w-24 h-24 mb-3"><img data-template-id="photo-1" class="canva-image w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/7584340/pexels-photo-7584340.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400" alt="Young man smiling while holding notebooks">
+      </div>
+      <h3 data-template-id="name-1" class="canva-text font-bold" style="color: rgb(0, 255, 255); font-weight: bold; font-style: normal; font-size: 17px;">Ahmad Fajar</h3>
+      <p data-template-id="hobby-1" class="canva-text mt-1 text-xs" style="color: rgb(255, 255, 0); font-weight: 400; font-style: normal; font-size: 14px;">Hobi: Membaca Al-Quran</p>
+      <p data-template-id="motto-1" class="canva-text mt-2 text-xs italic" style="color: rgb(255, 105, 180); font-weight: 400; font-style: normal; font-size: 14px;">"Ilmu adalah cahaya hati"</p>
+     </div>
+     <div data-template-id="card-2" class="canva-card y2k-card flex flex-col items-center text-center p-5 rounded-lg relative" style="background: linear-gradient(135deg, rgb(26, 0, 51), rgb(13, 0, 26));">
+      <div class="y2k-photo-frame w-24 h-24 mb-3"><img data-template-id="photo-2" class="canva-image w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/7129611/pexels-photo-7129611.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400" alt="Portrait of a smiling man in traditional white thobe">
+      </div>
+      <h3 data-template-id="name-2" class="canva-text font-bold" style="color: rgb(0, 255, 255); font-weight: bold; font-style: normal; font-size: 17px;">Muhammad Rizki</h3>
+      <p data-template-id="hobby-2" class="canva-text mt-1 text-xs" style="color: rgb(255, 255, 0); font-weight: 400; font-style: normal; font-size: 14px;">Hobi: Bermain Futsal</p>
+      <p data-template-id="motto-2" class="canva-text mt-2 text-xs italic" style="color: rgb(255, 105, 180); font-weight: 400; font-style: normal; font-size: 14px;">"Kerja keras tidak pernah mengkhianati"</p>
+     </div>
+     <div data-template-id="card-3" class="canva-card y2k-card flex flex-col items-center text-center p-5 rounded-lg relative" style="background: linear-gradient(135deg, rgb(26, 0, 51), rgb(13, 0, 26));">
+      <div class="y2k-photo-frame w-24 h-24 mb-3"><img data-template-id="photo-3" class="canva-image w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/16452330/pexels-photo-16452330.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400" alt="A teenager in traditional white clothing in a field">
+      </div>
+      <h3 data-template-id="name-3" class="canva-text font-bold" style="color: rgb(0, 255, 255); font-weight: bold; font-style: normal; font-size: 17px;">Ilham Maulana</h3>
+      <p data-template-id="hobby-3" class="canva-text mt-1 text-xs" style="color: rgb(255, 255, 0); font-weight: 400; font-style: normal; font-size: 14px;">Hobi: Menulis Puisi</p>
+      <p data-template-id="motto-3" class="canva-text mt-2 text-xs italic" style="color: rgb(255, 105, 180); font-weight: 400; font-style: normal; font-size: 14px;">"Pena lebih tajam dari pedang"</p>
+     </div>
+     <div data-template-id="card-4" class="canva-card y2k-card flex flex-col items-center text-center p-5 rounded-lg relative" style="background: linear-gradient(135deg, rgb(26, 0, 51), rgb(13, 0, 26));">
+      <div class="y2k-photo-frame w-24 h-24 mb-3"><img data-template-id="photo-4" class="canva-image w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/33690305/pexels-photo-33690305.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400" alt="Confident young man with backpack outdoors">
+      </div>
+      <h3 data-template-id="name-4" class="canva-text font-bold" style="color: rgb(0, 255, 255); font-weight: bold; font-style: normal; font-size: 17px;">Dani Saputra</h3>
+      <p data-template-id="hobby-4" class="canva-text mt-1 text-xs" style="color: rgb(255, 255, 0); font-weight: 400; font-style: normal; font-size: 14px;">Hobi: Olahraga Lari</p>
+      <p data-template-id="motto-4" class="canva-text mt-2 text-xs italic" style="color: rgb(255, 105, 180); font-weight: 400; font-style: normal; font-size: 14px;">"Sehat itu mahal harganya"</p>
+     </div>
+     <div data-template-id="card-5" class="canva-card y2k-card flex flex-col items-center text-center p-5 rounded-lg relative" style="background: linear-gradient(135deg, rgb(26, 0, 51), rgb(13, 0, 26));">
+      <div class="y2k-photo-frame w-24 h-24 mb-3"><img data-template-id="photo-5" class="canva-image w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/7129747/pexels-photo-7129747.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400" alt="Middle Eastern man in white thobe smiling">
+      </div>
+      <h3 data-template-id="name-5" class="canva-text font-bold" style="color: rgb(0, 255, 255); font-weight: bold; font-style: normal; font-size: 17px;">Fikri Haikal</h3>
+      <p data-template-id="hobby-5" class="canva-text mt-1 text-xs" style="color: rgb(255, 255, 0); font-weight: 400; font-style: normal; font-size: 14px;">Hobi: Kaligrafi</p>
+      <p data-template-id="motto-5" class="canva-text mt-2 text-xs italic" style="color: rgb(255, 105, 180); font-weight: 400; font-style: normal; font-size: 14px;">"Seni adalah ibadah"</p>
+     </div>
+     <div data-template-id="card-6" class="canva-card y2k-card flex flex-col items-center text-center p-5 rounded-lg relative" style="background: linear-gradient(135deg, rgb(26, 0, 51), rgb(13, 0, 26));">
+      <div class="y2k-photo-frame w-24 h-24 mb-3"><img data-template-id="photo-6" class="canva-image w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/13134221/pexels-photo-13134221.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400" alt="Teen posing outdoors among greenery">
+      </div>
+      <h3 data-template-id="name-6" class="canva-text font-bold" style="color: rgb(0, 255, 255); font-weight: bold; font-style: normal; font-size: 17px;">Rafi Aditya</h3>
+      <p data-template-id="hobby-6" class="canva-text mt-1 text-xs" style="color: rgb(255, 255, 0); font-weight: 400; font-style: normal; font-size: 14px;">Hobi: Berkebun</p>
+      <p data-template-id="motto-6" class="canva-text mt-2 text-xs italic" style="color: rgb(255, 105, 180); font-weight: 400; font-style: normal; font-size: 14px;">"Alam adalah guru terbaik"</p>
+     </div>
+     <div data-template-id="card-7" class="canva-card y2k-card flex flex-col items-center text-center p-5 rounded-lg relative" style="background: linear-gradient(135deg, rgb(26, 0, 51), rgb(13, 0, 26));">
+      <div class="y2k-photo-frame w-24 h-24 mb-3"><img data-template-id="photo-7" class="canva-image w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/36828104/pexels-photo-36828104.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400" alt="Portrait of a young man smiling indoors">
+      </div>
+      <h3 data-template-id="name-7" class="canva-text font-bold" style="color: rgb(0, 255, 255); font-weight: bold; font-style: normal; font-size: 17px;">Zaki Firmansyah</h3>
+      <p data-template-id="hobby-7" class="canva-text mt-1 text-xs" style="color: rgb(255, 255, 0); font-weight: 400; font-style: normal; font-size: 14px;">Hobi: Memasak</p>
+      <p data-template-id="motto-7" class="canva-text mt-2 text-xs italic" style="color: rgb(255, 105, 180); font-weight: 400; font-style: normal; font-size: 14px;">"Berbagi itu indah"</p>
+     </div>
+     <div data-template-id="card-8" class="canva-card y2k-card flex flex-col items-center text-center p-5 rounded-lg relative" style="background: linear-gradient(135deg, rgb(26, 0, 51), rgb(13, 0, 26));">
+      <div class="y2k-photo-frame w-24 h-24 mb-3"><img data-template-id="photo-8" class="canva-image w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/7983621/pexels-photo-7983621.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400" alt="Young man with glasses smiling in a library">
+      </div>
+      <h3 data-template-id="name-8" class="canva-text font-bold" style="color: rgb(0, 255, 255); font-weight: bold; font-style: normal; font-size: 17px;">Hasan Basri</h3>
+      <p data-template-id="hobby-8" class="canva-text mt-1 text-xs" style="color: rgb(255, 255, 0); font-weight: 400; font-style: normal; font-size: 14px;">Hobi: Membaca Buku</p>
+      <p data-template-id="motto-8" class="canva-text mt-2 text-xs italic" style="color: rgb(255, 105, 180); font-weight: 400; font-style: normal; font-size: 14px;">"Buku adalah jendela dunia"</p>
+     </div>
+     <div data-template-id="card-9" class="canva-card y2k-card flex flex-col items-center text-center p-5 rounded-lg relative" style="background: linear-gradient(135deg, rgb(26, 0, 51), rgb(13, 0, 26));">
+      <div class="y2k-photo-frame w-24 h-24 mb-3"><img data-template-id="photo-9" class="canva-image w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/16783370/pexels-photo-16783370.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400" alt="A young man gazes thoughtfully at sunset">
+      </div>
+      <h3 data-template-id="name-9" class="canva-text font-bold" style="color: rgb(0, 255, 255); font-weight: bold; font-style: normal; font-size: 17px;">Yusuf Ramadhan</h3>
+      <p data-template-id="hobby-9" class="canva-text mt-1 text-xs" style="color: rgb(255, 255, 0); font-weight: 400; font-style: normal; font-size: 14px;">Hobi: Fotografi</p>
+      <p data-template-id="motto-9" class="canva-text mt-2 text-xs italic" style="color: rgb(255, 105, 180); font-weight: 400; font-style: normal; font-size: 14px;">"Abadikan setiap momen"</p>
+     </div>
+     <div data-template-id="card-10" class="canva-card y2k-card flex flex-col items-center text-center p-5 rounded-lg relative" style="background: linear-gradient(135deg, rgb(26, 0, 51), rgb(13, 0, 26));">
+      <div class="y2k-photo-frame w-24 h-24 mb-3"><img data-template-id="photo-10" class="canva-image w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/6345374/pexels-photo-6345374.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400" alt="Stylish portrait of a teenage boy">
+      </div>
+      <h3 data-template-id="name-10" class="canva-text font-bold" style="color: rgb(0, 255, 255); font-weight: bold; font-style: normal; font-size: 17px;">Farhan Alamsyah</h3>
+      <p data-template-id="hobby-10" class="canva-text mt-1 text-xs" style="color: rgb(255, 255, 0); font-weight: 400; font-style: normal; font-size: 14px;">Hobi: Desain Grafis</p>
+      <p data-template-id="motto-10" class="canva-text mt-2 text-xs italic" style="color: rgb(255, 105, 180); font-weight: 400; font-style: normal; font-size: 14px;">"Kreativitas tanpa batas"</p>
+     </div>
+     <div data-template-id="card-11" class="canva-card y2k-card flex flex-col items-center text-center p-5 rounded-lg relative" style="background: linear-gradient(135deg, rgb(26, 0, 51), rgb(13, 0, 26));">
+      <div class="y2k-photo-frame w-24 h-24 mb-3"><img data-template-id="photo-11" class="canva-image w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/5365307/pexels-photo-5365307.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400" alt="A cheerful man wearing traditional attire and glasses outdoors">
+      </div>
+      <h3 data-template-id="name-11" class="canva-text font-bold" style="color: rgb(0, 255, 255); font-weight: bold; font-style: normal; font-size: 17px;">Ridwan Kamil</h3>
+      <p data-template-id="hobby-11" class="canva-text mt-1 text-xs" style="color: rgb(255, 255, 0); font-weight: 400; font-style: normal; font-size: 14px;">Hobi: Public Speaking</p>
+      <p data-template-id="motto-11" class="canva-text mt-2 text-xs italic" style="color: rgb(255, 105, 180); font-weight: 400; font-style: normal; font-size: 14px;">"Bicara dengan ilmu"</p>
+     </div>
+     <div data-template-id="card-12" class="canva-card y2k-card flex flex-col items-center text-center p-5 rounded-lg relative" style="background: linear-gradient(135deg, rgb(26, 0, 51), rgb(13, 0, 26));">
+      <div class="y2k-photo-frame w-24 h-24 mb-3"><img data-template-id="photo-12" class="canva-image w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/7408371/pexels-photo-7408371.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400" alt="Portrait of a smiling young man in a blue shirt">
+      </div>
+      <h3 data-template-id="name-12" class="canva-text font-bold" style="color: rgb(0, 255, 255); font-weight: bold; font-style: normal; font-size: 17px;">Naufal Ghani</h3>
+      <p data-template-id="hobby-12" class="canva-text mt-1 text-xs" style="color: rgb(255, 255, 0); font-weight: 400; font-style: normal; font-size: 14px;">Hobi: Berenang</p>
+      <p data-template-id="motto-12" class="canva-text mt-2 text-xs italic" style="color: rgb(255, 105, 180); font-weight: 400; font-style: normal; font-size: 14px;">"Hidup mengalir seperti air"</p>
+     </div>
+     <div data-template-id="card-13" class="canva-card y2k-card flex flex-col items-center text-center p-5 rounded-lg relative" style="background: linear-gradient(135deg, rgb(26, 0, 51), rgb(13, 0, 26));">
+      <div class="y2k-photo-frame w-24 h-24 mb-3"><img data-template-id="photo-13" class="canva-image w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/673538/pexels-photo-673538.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400" alt="Portrait of a stylish young man wearing glasses and hoodie">
+      </div>
+      <h3 data-template-id="name-13" class="canva-text font-bold" style="color: rgb(0, 255, 255); font-weight: bold; font-style: normal; font-size: 17px;">Bilal Pratama</h3>
+      <p data-template-id="hobby-13" class="canva-text mt-1 text-xs" style="color: rgb(255, 255, 0); font-weight: 400; font-style: normal; font-size: 14px;">Hobi: Coding</p>
+      <p data-template-id="motto-13" class="canva-text mt-2 text-xs italic" style="color: rgb(255, 105, 180); font-weight: 400; font-style: normal; font-size: 14px;">"Teknologi untuk kebaikan"</p>
+     </div>
+     <div data-template-id="card-14" class="canva-card y2k-card flex flex-col items-center text-center p-5 rounded-lg relative" style="background: linear-gradient(135deg, rgb(26, 0, 51), rgb(13, 0, 26));">
+      <div class="y2k-photo-frame w-24 h-24 mb-3"><img data-template-id="photo-14" class="canva-image w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/13538613/pexels-photo-13538613.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400" alt="Portrait of a teenage boy in school uniform smiling">
+      </div>
+      <h3 data-template-id="name-14" class="canva-text font-bold" style="color: rgb(0, 255, 255); font-weight: bold; font-style: normal; font-size: 17px;">Arif Hidayat</h3>
+      <p data-template-id="hobby-14" class="canva-text mt-1 text-xs" style="color: rgb(255, 255, 0); font-weight: 400; font-style: normal; font-size: 14px;">Hobi: Bermain Catur</p>
+      <p data-template-id="motto-14" class="canva-text mt-2 text-xs italic" style="color: rgb(255, 105, 180); font-weight: 400; font-style: normal; font-size: 14px;">"Strategi menentukan kemenangan"</p>
+     </div>
+     <div data-template-id="card-15" class="canva-card y2k-card flex flex-col items-center text-center p-5 rounded-lg relative" style="background: linear-gradient(135deg, rgb(26, 0, 51), rgb(13, 0, 26));">
+      <div class="y2k-photo-frame w-24 h-24 mb-3"><img data-template-id="photo-15" class="canva-image w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/10173294/pexels-photo-10173294.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400" alt="Portrait of a young man wearing glasses at twilight">
+      </div>
+      <h3 data-template-id="name-15" class="canva-text font-bold" style="color: rgb(0, 255, 255); font-weight: bold; font-style: normal; font-size: 17px;">Kemal Fauzi</h3>
+      <p data-template-id="hobby-15" class="canva-text mt-1 text-xs" style="color: rgb(255, 255, 0); font-weight: 400; font-style: normal; font-size: 14px;">Hobi: Menonton Dokumenter</p>
+      <p data-template-id="motto-15" class="canva-text mt-2 text-xs italic" style="color: rgb(255, 105, 180); font-weight: 400; font-style: normal; font-size: 14px;">"Pengetahuan adalah kekuatan"</p>
+     </div>
+     <div data-template-id="card-16" class="canva-card y2k-card flex flex-col items-center text-center p-5 rounded-lg relative" style="background: linear-gradient(135deg, rgb(26, 0, 51), rgb(13, 0, 26));">
+      <div class="y2k-photo-frame w-24 h-24 mb-3"><img data-template-id="photo-16" class="canva-image w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/4347475/pexels-photo-4347475.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400" alt="A young man stands confidently in a modern library">
+      </div>
+      <h3 data-template-id="name-16" class="canva-text font-bold" style="color: rgb(0, 255, 255); font-weight: bold; font-style: normal; font-size: 17px;">Galih Permana</h3>
+      <p data-template-id="hobby-16" class="canva-text mt-1 text-xs" style="color: rgb(255, 255, 0); font-weight: 400; font-style: normal; font-size: 14px;">Hobi: Berdakwah</p>
+      <p data-template-id="motto-16" class="canva-text mt-2 text-xs italic" style="color: rgb(255, 105, 180); font-weight: 400; font-style: normal; font-size: 14px;">"Sampaikan walau satu ayat"</p>
+     </div>
+     <div data-template-id="card-17" class="canva-card y2k-card flex flex-col items-center text-center p-5 rounded-lg relative" style="background: linear-gradient(135deg, rgb(26, 0, 51), rgb(13, 0, 26));">
+      <div class="y2k-photo-frame w-24 h-24 mb-3"><img data-template-id="photo-17" class="canva-image w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/6345373/pexels-photo-6345373.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400" alt="Portrait of a young smiling man against blue backdrop">
+      </div>
+      <h3 data-template-id="name-17" class="canva-text font-bold" style="color: rgb(0, 255, 255); font-weight: bold; font-style: normal; font-size: 17px;">Syahrul Akbar</h3>
+      <p data-template-id="hobby-17" class="canva-text mt-1 text-xs" style="color: rgb(255, 255, 0); font-weight: 400; font-style: normal; font-size: 14px;">Hobi: Memanah</p>
+      <p data-template-id="motto-17" class="canva-text mt-2 text-xs italic" style="color: rgb(255, 105, 180); font-weight: 400; font-style: normal; font-size: 14px;">"Fokus pada tujuan"</p>
+     </div>
+    </div>
+   </main>
+   <footer class="text-center py-8">
+    <p class="text-gray-300 blink mb-2">~ * ~ * ~ * ~</p>
+    <p data-template-id="footer-text" class="canva-text text-sm" style="color: rgb(255, 105, 180); font-weight: 400; font-style: normal; font-size: 14px;">✧ © 2026 Cold Man — BSD Barudak Santri Daarul Muqimien ✧</p>
+   </footer>
+  </div>
+  <script src="/_sdk/editing_sdk.js"></script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a043331c3ea5f88a',t:'MTc4MDIwMTM2OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body></html>

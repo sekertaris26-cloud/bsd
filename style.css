@@ -1,0 +1,175 @@
+/* ===== PREMIUM GLASSMORPHISM BSD ===== */
+
+body{
+    font-family:'Space Mono',monospace;
+    min-height:100vh;
+    overflow-x:hidden;
+    background:
+    radial-gradient(circle at top left,#4c00ff 0%,transparent 30%),
+    radial-gradient(circle at bottom right,#00fff2 0%,transparent 30%),
+    linear-gradient(135deg,#050510,#0d0221,#17003d);
+}
+
+/* Header */
+h1{
+    color:#fff;
+    text-shadow:
+    0 0 10px #ff00ff,
+    0 0 20px #ff00ff,
+    0 0 40px #ff00ff;
+}
+
+/* Glass Card */
+.y2k-card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    border-radius:25px;
+
+    box-shadow:
+    0 8px 32px rgba(0,0,0,.4),
+    0 0 15px rgba(0,255,255,.15);
+
+    transition:all .35s ease;
+
+    overflow:hidden;
+    position:relative;
+}
+
+/* Efek cahaya bergerak */
+.y2k-card::before{
+    content:"";
+    position:absolute;
+    top:-100%;
+    left:-100%;
+    width:250%;
+    height:250%;
+
+    background:
+    linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.12),
+    transparent);
+
+    transform:rotate(25deg);
+    transition:.8s;
+}
+
+.y2k-card:hover::before{
+    left:100%;
+}
+
+.y2k-card:hover{
+    transform:translateY(-10px) scale(1.04);
+
+    border-color:#00ffff;
+
+    box-shadow:
+    0 0 20px #00ffff,
+    0 0 40px rgba(0,255,255,.6),
+    0 15px 40px rgba(0,0,0,.5);
+}
+
+/* Foto */
+.y2k-photo-frame{
+    width:110px;
+    height:110px;
+
+    border-radius:50%;
+    padding:4px;
+
+    background:
+    linear-gradient(
+    45deg,
+    #00ffff,
+    #ff00ff,
+    #00ff88);
+
+    box-shadow:
+    0 0 15px #00ffff,
+    0 0 30px rgba(255,0,255,.5);
+}
+
+.y2k-photo-frame img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:50%;
+    border:3px solid #0d0221;
+}
+
+/* Nama */
+h3{
+    color:#00ffff;
+    margin-top:10px;
+
+    text-shadow:
+    0 0 10px #00ffff;
+}
+
+/* Hobi */
+p{
+    color:#ffffff;
+}
+
+/* Motto */
+.y2k-card p:last-child{
+    color:#ff7ad9;
+    font-style:italic;
+}
+
+/* Animasi bintang */
+.star-deco{
+    position:absolute;
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+/* Blink */
+.blink{
+    animation:blink 1.2s infinite;
+}
+
+@keyframes blink{
+    0%,100%{
+        opacity:1;
+    }
+    50%{
+        opacity:.4;
+    }
+}
+
+/* Footer */
+footer{
+    color:#ff7ad9;
+    text-shadow:0 0 10px #ff00ff;
+}
+
+/* Responsive HP */
+@media(max-width:768px){
+
+    h1{
+        font-size:2rem !important;
+    }
+
+    .y2k-card{
+        margin-bottom:15px;
+    }
+
+    .y2k-photo-frame{
+        width:90px;
+        height:90px;
+    }
+}
